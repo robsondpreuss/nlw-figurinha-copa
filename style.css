@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  /*Utilizamos o * para aplicar esta fonte dentro de todos os elemntos que estão dentro do body */
+  font-family: "Roboto";
+}
+
+body {
+  background: linear-gradient(150deg, #0f2b05, #000000) no-repeat center center fixed;
+  /*Utilizar a propriedade "background" é um (shorthand) - Colocamos varias propriedadesna mesma linha  */
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  padding: 75px 0;
+}
+
+.card {
+  display: inline-block;
+  width: 354px;
+  height: 508px;
+  background-image: url(./assets/bg-explorer.svg);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: anime-card 0.4s forwards;
+  /*Animação do card "forwards" faz o cartão ficar os propriedades do "to" que esta dentro do keyframes  */
+}
+
+.card>img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #f7dd43;
+  margin-top: 115px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.info {
+  margin-top: 98px;
+  color: white;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.info h1 {
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 160%;
+}
+
+@keyframes anime-card {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
